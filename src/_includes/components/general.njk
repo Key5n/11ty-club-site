@@ -1,0 +1,9 @@
+<h1>部活動概要</h1>
+<table>
+  {%- for item in general.items %}
+  <tr>
+    <th>{{ item.key }}</th>
+    <th>{{ item.value }}</th>
+  </tr>
+  {%- endfor %}
+</table>
