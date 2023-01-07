@@ -1,3 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
+
+html {
+  font-size: 16px;
+}
+
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Noto Serif JP", serif;
+}
+
+ul[role="list"] {
+  padding-left: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 3px solid #e5e5e5;
+}
+
+.header__icon {
+  margin-left: 1rem;
+}
+
+.header__nav__list {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.header__nav__list__item__link {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1px;
+}
+
+.header__nav__list__item__link:hover {
+  border-bottom: 1px solid aqua;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  gap: 10vh;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.block p,
+.block h1 {
+  text-align: center;
+}
+
+.block h1 {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.block--general {
+  width: 100%;
+}
+
+.block--general thead {
+  display: none;
+}
+
+.block--general table {
+  border-collapse: collapse;
+}
+
+.block--general tr {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.block--general td {
+  padding: 0.5rem 1rem;
+}
+
+#animationPlace {
+  font-size: 3rem;
+  height: 6rem;
+  margin-top: 5vh;
+  text-align: center;
+  white-space: pre-wrap;
+  font-weight: normal;
 }

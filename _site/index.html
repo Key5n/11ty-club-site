@@ -8,67 +8,99 @@
       name="description"
       content="名古屋工業大学プログラミング部C0deの公式ウェブサイトです。"
     />
+    <link rel="stylesheet" href=/styles/reset.css />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
+    
     <link rel="stylesheet" href=/styles/style.css />
+
+    <script src="/js/main.js" type="module" defer></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="#about" >
+    <header class="header">
+      <a href="#top" class="header__icon">
+        <img src="/assets/images/c0de-icon.png" alt="c0de-icon" width="50px" height="50px">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav__list" role="list">
+          <li class="header__nav__list__item" role="listitem">
+            <a href="#about" class="header__nav__list__item__link" >
               C0deについて
             </a>
           </li>
-          <li>
-            <a href="#general" >
+          <li class="header__nav__list__item" role="listitem">
+            <a href="#general" class="header__nav__list__item__link" >
               部活動概要
             </a>
           </li>
-          <li>
-            <a href="#student" >
+          <li class="header__nav__list__item" role="listitem">
+            <a href="#student" class="header__nav__list__item__link" >
               学生向け
             </a>
           </li>
-          <li>
-            <a href="#access" >
+          <li class="header__nav__list__item" role="listitem">
+            <a href="#access" class="header__nav__list__item__link" >
               アクセス
             </a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-      
-<h1>C0deについて</h1>
-<p>
-  私たちC0de部はプログラミングを中心に工学部として必要なスキルを
-  身に着けてゆくことを目的の中心に活動しています。
-  スマホアプリ開発、ウェブアプリ開発など
-  それぞれが得意な分野の知識・ノウハウを生かした活動を行っています。
-</p>
- <h1>部活動概要</h1>
+    
+    <main class="main">
+      <div id="animationPlace">
+        <h1>
+          名古屋工業大学プログラミング部
+        </h1>
+      </div>
+      <img src="/assets/images/c0de-icon.png" alt="c0de-icon" width="400px" height="400px">
+      <div id="about" class="block block--about">
+<h1>C0de について</h1>
+<p>私たち C0de 部はプログラミングを中心に工学部として必要なスキルを身に着けてゆくことを目的の中心に活動しています。<br>
+スマホアプリ開発、ウェブアプリ開発などそれぞれが得意な分野の知識・ノウハウを生かした活動を行っています。</p>
+</div>
+<div id="general" class="block block--general">
+<h1>部活動概要</h1>
 <table>
-  <tr>
-    <th>正式名称</th>
-    <th>C0de</th>
-  </tr>
-  <tr>
-    <th>部活動設立日</th>
-    <th>2016年4月</th>
-  </tr>
-  <tr>
-    <th>本拠地</th>
-    <th>名古屋工業大学55号館2階第1共用室</th>
-  </tr>
-  <tr>
-    <th>部員数</th>
-    <th>32人</th>
-  </tr>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正式名称</td>
+<td>C0de</td>
+</tr>
+<tr>
+<td>部活動設立日</td>
+<td>2016 年 4 月</td>
+</tr>
+<tr>
+<td>本拠地</td>
+<td>名古屋工業大学 55 号館 2 階第 1 共用室</td>
+</tr>
+</tbody>
 </table>
- 
+</div>
+<div id="student" class="block block--student">
+<h1>学生向け</h1>
+<p>月に 1 度、水曜 16:30 から 1 時間ほどの部会を開きます。<br>
+すべての部員は何らかのプロジェクトに参加し、部会でプロジェクトの進捗報告を行います。<br>
+作りたいものがある方、大学生からプログラミングをしてみたいという初心者歓迎です。</p>
+</div>
+<div id="access" class="block block--access">
+<h1>アクセス</h1>
+<p>TODO: 55 号館の写真と部室入口、中の写真をここに載せる</p>
+</div>
 
     </main>
-    <footer>
+
+    <footer class="footer">
       <p>&copy;  All you rights are belong to us</p>
     </footer>
   </body>

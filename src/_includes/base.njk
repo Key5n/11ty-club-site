@@ -12,15 +12,27 @@
       {{ site.description }}
     {%- endif %}"
     />
+    <link rel="stylesheet" href={{ "/styles/reset.css" | url }} />
+    {# google fontsのダウンロード #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
+    {# style sheetの読み込み #}
     <link rel="stylesheet" href={{ "/styles/style.css" | url }} />
+
+    <script src="/js/main.js" type="module" defer></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
+    <header class="header">
+      <a href="#top" class="header__icon">
+        <img src="/assets/images/c0de-icon.png" alt="c0de-icon" width="50px" height="50px">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav__list" role="list">
           {%- for item in nav.items %}
-          <li>
-            <a href="{{ item.url }}" {% if item.url == page.url %} aria-current="page" data-state="active" {% endif %}>
+          <li class="header__nav__list__item" role="listitem">
+            <a href="{{ item.url }}" class="header__nav__list__item__link" {% if item.url == page.url %} aria-current="page" data-state="active" {% endif %}>
               {{ item.name }}
             </a>
           </li>
@@ -28,10 +40,18 @@
         </ul>
       </nav>
     </header>
-    <main>
+    
+    <main class="main">
+      <div id="animationPlace">
+        <h1>
+          名古屋工業大学プログラミング部
+        </h1>
+      </div>
+      <img src="/assets/images/c0de-icon.png" alt="c0de-icon" width="400px" height="400px">
       {{ content | safe }}
     </main>
-    <footer>
+
+    <footer class="footer">
       <p>&copy; {{ year }} All you rights are belong to us</p>
     </footer>
   </body>
