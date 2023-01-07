@@ -57,7 +57,7 @@ const displayClubNameLikeTyping = async (element, displayedNames) => {
       new Promise((resolve) => {
         setTimeout(() => {
           resolve();
-          element.textContent = displayedNames[i];
+          element.innerHTML = `<h1>${displayedNames[i]}</h1>`;
         }, 50);
       })
     );

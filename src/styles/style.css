@@ -27,16 +27,16 @@ ul[role="list"] {
   height: 100%;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
 }
 
 .header__nav__list__item__link {
   display: inline-block;
+  color: black;
   text-decoration: none;
   line-height: 50px;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-bottom: 1px;
+  border-bottom: 1px solid transparent;
 }
 
 .header__nav__list__item__link:hover {
@@ -48,7 +48,7 @@ ul[role="list"] {
   flex-direction: column;
   align-items: center;
   width: 80%;
-  margin: 0 auto;
+  margin: 10vh auto;
   gap: 10vh;
 }
 
@@ -90,10 +90,12 @@ ul[role="list"] {
 }
 
 #animationPlace {
-  font-size: 3rem;
-  height: 6rem;
-  margin-top: 5vh;
   text-align: center;
+}
+
+#animationPlace h1 {
+  height: 9rem;
   white-space: pre-wrap;
+  font-size: 3rem;
   font-weight: normal;
 }
