@@ -3,7 +3,7 @@
   <head>
     <title>C0de</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content-"width=device-width, initial-scale-1.0">
+    <meta name="viewport" content-"width=device-width, initial-scale=1.0">
     <meta
       name="description"
       content="名古屋工業大学プログラミング部C0deの公式ウェブサイトです。"
@@ -20,7 +20,7 @@
     <script src="/js/main.js" type="module" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <a href="#top" class="header__icon">
         <img src="/assets/images/c0de-icon.png" alt="c0de-icon" width="50px" height="50px">
       </a>
@@ -46,7 +46,17 @@
               アクセス
             </a>
           </li>
+          <li class="header__nav__list__item" role="listitem">
+            <a href="#contact" class="header__nav__list__item__link" >
+              お問い合わせ
+            </a>
+          </li>
         </ul>
+        <button id="header__nav__menu" class="header__nav__menu" href="#nav">
+          <svg width="50" height="50" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 8H27M5 16H27M5 24H27" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
       </nav>
     </header>
     
@@ -101,7 +111,7 @@
     </main>
 
     <footer class="footer">
-      <p>&copy;  All you rights are belong to us</p>
+      <p>&copy; フッター</p>
     </footer>
   </body>
 </html>
