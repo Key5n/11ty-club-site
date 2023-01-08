@@ -57,7 +57,7 @@ const displayClubNameLikeTyping = async (element, displayedNames) => {
       new Promise((resolve) => {
         setTimeout(() => {
           resolve();
-          element.textContent = displayedNames[i];
+          element.innerHTML = `<h1>${displayedNames[i]}</h1>`;
         }, 50);
       })
     );
@@ -68,4 +68,42 @@ if (animaitonPlace) {
   displayClubNameLikeTyping(animaitonPlace, displayedNames);
 } else {
   new Error(id + "をもったタグは存在しません");
+}
+
+/**
+ * @type {(entries: IntersectionObserverEntry[], observer: IntersectionObserver) => IntersectionObserver}
+ */
+const doWhenIntersection = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("blue");
+      console.log("交差");
+    }
+  });
+  return observer;
+};
+
+// const main = document.querySelector("#general");
+// const options = {
+//   root: null,
+//   rootMargin: "-50% 0px",
+//   threshold: 0,
+// };
+// const observer = new IntersectionObserver(doWhenIntersection, options);
+// if (main) {
+//   observer.observe(main);
+// }
+
+const navMenuButton = document.getElementById("header__nav__menu");
+const headerElement = document.getElementById("header");
+if (navMenuButton && headerElement) {
+  navMenuButton.addEventListener("click", () => {
+    if (headerElement.classList.contains("open")) {
+      headerElement.classList.remove("open");
+    } else {
+      headerElement.classList.add("open");
+    }
+  });
+} else {
+  new Error("そのIDがありません");
 }
