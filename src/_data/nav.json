@@ -3,6 +3,7 @@
     { "url": "#about", "name": "C0deについて" },
     { "url": "#general", "name": "部活動概要" },
     { "url": "#student", "name": "学生向け" },
-    { "url": "#access", "name": "アクセス" }
+    { "url": "#access", "name": "アクセス" },
+    { "url": "#contact", "name": "お問い合わせ" }
   ]
 }
