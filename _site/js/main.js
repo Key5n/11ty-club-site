@@ -69,3 +69,56 @@ if (animaitonPlace) {
 } else {
   new Error(id + "をもったタグは存在しません");
 }
+
+/**
+ * @type {(entries: IntersectionObserverEntry[], observer: IntersectionObserver) => IntersectionObserver}
+ */
+const doWhenIntersection = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("blue");
+      console.log("交差");
+    }
+  });
+  return observer;
+};
+
+// const main = document.querySelector("#general");
+// const options = {
+//   root: null,
+//   rootMargin: "-50% 0px",
+//   threshold: 0,
+// };
+// const observer = new IntersectionObserver(doWhenIntersection, options);
+// if (main) {
+//   observer.observe(main);
+// }
+
+const navMenuButton = document.getElementById("header__nav__menu");
+const headerElement = document.getElementById("header");
+if (navMenuButton && headerElement) {
+  navMenuButton.addEventListener("click", () => {
+    headerElement.classList.toggle("open");
+  });
+} else {
+  new Error("そのIDがありません");
+}
+
+const layer = document.querySelector(".layer");
+if (layer) {
+  console.log("exist");
+  layer.addEventListener("click", () => {
+    if (headerElement) {
+      headerElement.classList.toggle("open");
+    }
+  });
+}
+
+const nav = document.querySelector(".header__nav__list");
+if (nav) {
+  nav.addEventListener("click", () => {
+    if (headerElement) {
+      headerElement.classList.remove("open");
+    }
+  });
+}
