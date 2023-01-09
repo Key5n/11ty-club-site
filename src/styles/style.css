@@ -22,8 +22,7 @@ ul[role="list"] {
   background-color: white;
 }
 
-.header.open .header__nav::after {
-  content: "";
+.header.open .layer {
   position: absolute;
   left: 0;
   top: 0;
@@ -56,12 +55,12 @@ ul[role="list"] {
   padding-left: 1rem;
   padding-right: 1rem;
   margin-bottom: 1px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid transparent;
 }
 
-.header__nav__list__item:first-child {
+/* .header__nav__list__item:first-child {
   border-top: 1px solid gray;
-}
+} */
 
 .header__nav__list__item__link:hover {
   border-bottom: 1px solid aqua;
@@ -76,7 +75,7 @@ ul[role="list"] {
 .header.open .header__nav__list {
   position: absolute;
   left: 0;
-  top: 55px;
+  top: 50px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -161,4 +160,8 @@ ul[role="list"] {
 
 .blue {
   color: blue;
+}
+
+:target {
+  scroll-margin-top: 60px;
 }
