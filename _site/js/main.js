@@ -98,12 +98,27 @@ const navMenuButton = document.getElementById("header__nav__menu");
 const headerElement = document.getElementById("header");
 if (navMenuButton && headerElement) {
   navMenuButton.addEventListener("click", () => {
-    if (headerElement.classList.contains("open")) {
-      headerElement.classList.remove("open");
-    } else {
-      headerElement.classList.add("open");
-    }
+    headerElement.classList.toggle("open");
   });
 } else {
   new Error("そのIDがありません");
+}
+
+const layer = document.querySelector(".layer");
+if (layer) {
+  console.log("exist");
+  layer.addEventListener("click", () => {
+    if (headerElement) {
+      headerElement.classList.toggle("open");
+    }
+  });
+}
+
+const nav = document.querySelector(".header__nav__list");
+if (nav) {
+  nav.addEventListener("click", () => {
+    if (headerElement) {
+      headerElement.classList.remove("open");
+    }
+  });
 }
