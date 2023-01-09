@@ -1,6 +1,7 @@
 ---
 title: index
 permalink: /
+layout: base
 ---
 
 <div id="about" class="block block--about">
@@ -39,5 +40,11 @@ permalink: /
 # アクセス
 
 TODO: 55 号館の写真と部室入口、中の写真をここに載せる
+
+</div>
+
+<div id="contact" class="block block--contact">
+
+# お問い合わせ
 
 </div>
